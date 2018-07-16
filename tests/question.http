@@ -5,7 +5,7 @@ Content-Type: application/json
 
 {
     "category": "Technical Skills",
-    "title": "Previous Work Experience",
+    "title": "Previous Work Experience 2",
     "description": "What job are you doing at the moment?",
     "criteria": [
         {"item": "No work experience at all", "value": 1},
@@ -14,7 +14,7 @@ Content-Type: application/json
         {"item": "2+ years in mid to high level positions", "value": 4},
         {"item": "Combination of personal ventures & work", "value": 5}
     ],
-    "priority": 1,
+    "priority": 11,
     "comment": "This should def be included in the tech skills calculation"
 }
 

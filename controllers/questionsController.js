@@ -12,19 +12,14 @@ module.exports = {
         })
     },
 
-    newQuestion: (req, res, next) => {
-        const question = req.body
-
-        Question.createQuestion(question)
-        .then(result => {
-            // TODO: creates a valid cookie
-    
-            res.status(200).json(result)
-        })
-        .catch(err => {
-            res.status(500)
-            throw new Error(err.message)
-        })
+    newQuestion: async (req, res, next) => {
+        try {
+            const newQuestion = new Question(req.body)
+            const question = await newQuestion.save()
+            res.status(201).json(question)
+        } catch (err) {
+            next(err)
+        }
     },
 
     getQuestion: async (req, res, next) => {

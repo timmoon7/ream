@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 // const Question = require('../models/Question')
-const QuestionsController = require('../controllers/QuestionsController')
+const QuestionsController = require('../controllers/questionsController')
 
 router.route('/')
     .get(QuestionsController.index)
