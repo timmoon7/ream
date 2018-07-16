@@ -14,8 +14,6 @@ const questionSchema = new Schema({
     ],
     priority: Number,
     comment: String
-    // user: { type: Schema.Types.ObjectId }
-    // user: { type: Schema.Types.ObjectId, ref: 'User' }
 })
 
 questionSchema.statics.createQuestion = async function(question) {
