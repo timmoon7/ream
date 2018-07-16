@@ -92,10 +92,10 @@ The database to be used is MongoDB. The reason for our choice is it’s data rep
 We have 3 basic collections: Users, Questions and Interviews. Users and questions will be embedded in the interviews collection. 
 
 #### 13. <a id="13"></a> Provide your database schema design.
-![schema](/schema)
-![user](/user.png)
-![question](/question.png)
-![interview](/interview.png)
+![schema](./assets/schema)
+![user](./assets/user.png)
+![question](./assets/question.png)
+![interview](./assets/interview.png)
 
 #### 14. <a id="14"></a> Provide User stories for your App.
 - As an interviewer I want to be able to record answers in real time so that I can record accurate information.
@@ -116,7 +116,7 @@ We have 3 basic collections: Users, Questions and Interviews. Users and question
 
 #### 15. <a id="15"></a> Provide Wireframes for your App. <br>
 https://www.figma.com/file/Mk5ccSdSuA67OOHbsYK9XoyJ/Project-3
-![figma](/figma2.png)
+![figma](./assets/figma2.png)
 
 #### 16. <a id="16"></a> Describe the way Tasks are being allocated and tracked in your project. <br>
 Tasks are being allocated and tracked via Trello. Tasks are made small and achievable, and are colour coded based on progress. There is a further layer of task separation with colour coding based on what is part A, B and C. 
