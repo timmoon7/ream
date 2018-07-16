@@ -1,0 +1,7 @@
+node_modules
+nodemon.json
+.env
+.env.development
+.env.test
+.env.*
+now.json

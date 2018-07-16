@@ -1,0 +1,40 @@
+###
+GET http://localhost:3000/interviews/
+
+###
+POST http://localhost:3000/interviews/
+Content-Type: application/json
+
+{
+    "year": 2018,
+    "intake": 1,
+    "campus": "Melbourne",
+    "interviewer": "5b44483f4330e5ca9f6ec619",
+    "date_time": "2018/07/13 14:00:00",
+    "duration": 30,
+    "interviewee": {
+        "email": "john@test.com", 
+        "phone": "0412345678",
+        "first_name": "John",
+        "last_name": "Smith",
+        "student_id": "CAM123456"
+    },
+    "scores": [
+        {"question": "Previous Work Experience", "score": 3},
+        {"question": "Research & Understanding", "score": 4},
+        {"question": "Engagement with Tech Industry", "score": 5},
+        {"question": "Prior Coding Experience", "score": 4},
+        {"question": "Previous Studies", "score": 5},
+        {"question": "Written Skills", "score": 4},
+        {"question": "Verbal Skills", "score": 3},
+        {"question": "Presentation & Professionalism", "score": 4},
+        {"question": "Purpose & Drivenness", "score": 5}
+    ],
+    "test_score": 10,
+    "outcome": "Accepted",
+    "outcome_comment": "Wating for something",
+    "jr_updated": true,
+    "hubspot_updated": true,
+    "enrolment_confirmed": false,
+    "comment": false
+}
