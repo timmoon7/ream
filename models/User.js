@@ -28,11 +28,11 @@ userSchema.statics.isAuthenticUser = async function(email, password) {
         const hash = user.password
         // user password either correct or incorrect
         return await bcrypt.compare(password, hash)
-
 }
 
-userSchema.statics.register = async function(email, password, campus, first_name, last_name, role) {
-    
+userSchema.statics.register = async function(user) {
+    const {email, password, campus, first_name, last_name, role} = user
+
     const salt = await bcrypt.genSalt()
     const hash = await bcrypt.hash(password, salt)
     try {
