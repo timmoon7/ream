@@ -9,21 +9,18 @@ const interviewSchema = new Schema({
     campus: String,
     interviewer: { type: Schema.Types.ObjectId, ref: 'User' },
     date_time: Date,
+    duration: Number,
     interviewee: {
-        first_name: String,
-        last_name: String,
         email: String, 
         phone: String,
-        student_id: String
+        first_name: String,
+        last_name: String
     },
-    scores: [
-        { question: String,
-          score: Number
-        }
-    ],
+    scores: Object,
     test_score: Number,
     outcome: String,
     outcome_comment: String,
+    student_id: String,
     jr_updated: Boolean,
     hubspot_updated: Boolean,
     enrolment_confirmed: Boolean,
