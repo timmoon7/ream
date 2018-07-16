@@ -1,30 +1,16 @@
 const express = require('express')
-const Interview = require('../models/Interview')
 const router = express.Router()
+const InterviewsController = require('../controllers/interviewsController')
 
-router.get('/', (req, res) => {
-    Interview.find()
-    .then(interviews => {
-        res.status(200).json(interviews)
-    })
-    .catch(err => {
-        throw new Error(err.message)
-    })
+router.route('/')
+    .get(InterviewsController.index)
+    .post(InterviewsController.newInterview);
 
-})
-
-router.post('/', (req, res) => {
-    const interview = req.body
-
-    Interview.createInterview(interview)
-    .then(result => {
-        res.status(200).json(result)
-    })
-    .catch(err => {
-        res.status(500)
-        throw new Error(err.message)
-    })
-
-})
+   
+router.route('/:interviewId')
+    .get(InterviewsController.getInterview)
+    .put(InterviewsController.replaceInterview)
+    .patch(InterviewsController.updateInterview)
+    .delete(InterviewsController.deleteInterview)
 
 module.exports = router

@@ -1,6 +1,7 @@
 ###
 GET http://localhost:3000/interviews/
 
+
 ###
 POST http://localhost:3000/interviews/
 Content-Type: application/json
@@ -10,31 +11,123 @@ Content-Type: application/json
     "intake": 1,
     "campus": "Melbourne",
     "interviewer": "5b44483f4330e5ca9f6ec619",
-    "date_time": "2018/07/13 14:00:00",
+    "date_time": "2018/07/13 15:00:00",
     "duration": 30,
     "interviewee": {
-        "email": "john@test.com", 
+        "email": "tom@test.com", 
         "phone": "0412345678",
-        "first_name": "John",
-        "last_name": "Smith",
-        "student_id": "CAM123456"
+        "first_name": "Tom",
+        "last_name": "Cook"
     },
     "scores": [
-        {"question": "Previous Work Experience", "score": 3},
-        {"question": "Research & Understanding", "score": 4},
-        {"question": "Engagement with Tech Industry", "score": 5},
-        {"question": "Prior Coding Experience", "score": 4},
-        {"question": "Previous Studies", "score": 5},
+        {"question": "Previous Work Experience", "score": 2},
+        {"question": "Research & Understanding", "score": 3},
+        {"question": "Engagement with Tech Industry", "score": 3},
+        {"question": "Prior Coding Experience", "score": 2},
+        {"question": "Previous Studies", "score": 3},
         {"question": "Written Skills", "score": 4},
-        {"question": "Verbal Skills", "score": 3},
-        {"question": "Presentation & Professionalism", "score": 4},
+        {"question": "Verbal Skills", "score": 5},
+        {"question": "Presentation & Professionalism", "score": 5},
         {"question": "Purpose & Drivenness", "score": 5}
     ],
     "test_score": 10,
     "outcome": "Accepted",
     "outcome_comment": "Wating for something",
+    "student_id": "CAM1000001",
+    "jr_updated": false,
+    "hubspot_updated": false,
+    "enrolment_confirmed": false,
+    "comment": "good candidate"
+}
+
+###
+POST http://localhost:3000/interviews/
+Content-Type: application/json
+
+{
+    "year": 2018,
+    "intake": 1,
+    "campus": "Melbourne",
+    "interviewer": "5b44483f4330e5ca9f6ec619",
+    "date_time": "2018/07/13 15:00:00",
+    "interviewee": {
+        "email": "sally@test.com", 
+        "phone": "0412345678",
+        "first_name": "Sally",
+        "last_name": "Smith"
+    }
+}
+
+###
+GET http://localhost:3000/interviews/5b4c1438d684c9352d5bd39b
+
+###
+PUT http://localhost:3000/interviews/5b4c1438d684c9352d5bd39b
+Content-Type: application/json
+
+
+{
+    "year": 2018,
+    "intake": 1,
+    "campus": "Melbourne",
+    "interviewer": "5b44483f4330e5ca9f6ec619",
+    "date_time": "2018/07/13 15:00:00",
+    "duration": 40,
+    "interviewee": {
+        "email": "sally@test.com", 
+        "phone": "0412345678",
+        "first_name": "Sally",
+        "last_name": "Smith"
+    },
+    "scores": [
+        {"question": "Previous Work Experience", "score": 3},
+        {"question": "Research & Understanding", "score": 3},
+        {"question": "Engagement with Tech Industry", "score": 3},
+        {"question": "Prior Coding Experience", "score": 2},
+        {"question": "Previous Studies", "score": 3},
+        {"question": "Written Skills", "score": 5},
+        {"question": "Verbal Skills", "score": 5},
+        {"question": "Presentation & Professionalism", "score": 5},
+        {"question": "Purpose & Drivenness", "score": 5}
+    ],
+    "test_score": 10,
+    "outcome": "Accepted",
+    "outcome_comment": "Wating for something",
+    "student_id": "CAM1000002",
     "jr_updated": true,
     "hubspot_updated": true,
-    "enrolment_confirmed": false,
-    "comment": false
+    "enrolment_confirmed": true,
+    "comment": "very positive"
 }
+
+###
+PATCH http://localhost:3000/interviews/5b4c1438d684c9352d5bd39b
+Content-Type: application/json
+
+{
+    "duration": 40,
+    "scores": [
+        {"question": "Previous Work Experience", "score": 4},
+        {"question": "Research & Understanding", "score": 5},
+        {"question": "Engagement with Tech Industry", "score": 3},
+        {"question": "Prior Coding Experience", "score": 5},
+        {"question": "Previous Studies", "score": 5},
+        {"question": "Written Skills", "score": 5},
+        {"question": "Verbal Skills", "score": 5},
+        {"question": "Presentation & Professionalism", "score": 5},
+        {"question": "Purpose & Drivenness", "score": 5}
+    ],
+    "test_score": 10,
+    "outcome": "Accepted",
+    "outcome_comment": "Wating for something",
+    "student_id": "CAM1000002",
+    "jr_updated": true,
+    "hubspot_updated": true,
+    "enrolment_confirmed": true,
+    "comment": "very positive and proactive"
+}
+
+
+###
+DELETE http://localhost:3000/interviews/5b4c1438d684c9352d5bd39b
+
