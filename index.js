@@ -19,7 +19,7 @@ app.use(cors({
 }))
 app.use(cookieParser())
 app.use('/auth', authRouter)
-app.use('/user', userRouter)
+app.use('/users', userRouter)
 app.use('/questions', questionRouter)
 app.use('/interviews', interviewRouter)
 
