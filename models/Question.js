@@ -1,17 +1,12 @@
 const mongoose = require('../controllers/connectdb')
-// const bcrypt = require('bcrypt')
 const {Schema} = mongoose
 
 
 const questionSchema = new Schema({
     category: String,
     title: String,
-    descritpion: String,
-    criteria: [
-        { item: String,
-          value: Number
-        }
-    ],
+    description: String,
+    criteria: Object,
     priority: Number,
     comment: String
 })
