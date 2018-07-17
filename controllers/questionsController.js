@@ -1,15 +1,13 @@
 const Question = require('../models/Question')
 
 module.exports = {
-    index: (req, res, next) => {
-        Question.find()
-        .then(questions => {
+    index: async (req, res, next) => {
+        try {
+            const questions = await Question.find()
             res.status(200).json(questions)
-        })
-        .catch(err => {
-            next(err)
-            // throw new Error(err.message)
-        })
+            } catch(err) {
+                next(err)
+            }
     },
 
     newQuestion: async (req, res, next) => {
@@ -23,30 +21,46 @@ module.exports = {
     },
 
     getQuestion: async (req, res, next) => {
-        const { questionId } = req.params
-        const question =  await Question.findById(questionId)
-        res.status(200).json(question)
+        try {
+            const { questionId } = req.params
+            const question =  await Question.findById(questionId)
+            res.status(200).json(question)
+        } catch(err) {
+            next(err)
+        }        
     },
 
     replaceQuestion: async (req, res, next) => {
-        const { questionId } = req.params
-        const newQuestion = req.body
-        const result =  await Question.findByIdAndUpdate(questionId, newQuestion)
-        res.status(200).json(result)
+        try {
+            const { questionId } = req.params
+            const newQuestion = req.body
+            const result =  await Question.findByIdAndUpdate(questionId, newQuestion, {new: true})
+            res.status(200).json(result)
+        } catch(err) {
+            next(err)
+        }
     },
 
     updateQuestion: async (req, res, next) => {
-        const { questionId } = req.params
-        const newQuestion = req.body
-        const result =  await Question.findByIdAndUpdate(questionId, newQuestion)
-        res.status(200).json(result)
+        try {
+            const { questionId } = req.params
+            const newQuestion = req.body
+            const result =  await Question.findByIdAndUpdate(questionId, newQuestion, {new: true})
+            res.status(200).json(result)
+        } catch(err) {
+            next(err)
+        }        
     },
 
     deleteQuestion: async (req, res, next) => {
-        const { questionId } = req.params
-        const question = await Question.findById(questionId)
-        const result =  await question.remove()
-        res.status(200).json(result)
+        try {
+            const { questionId } = req.params
+            const question = await Question.findById(questionId)
+            const result =  await question.remove()
+            res.status(200).json(result)
+        } catch(err) {
+            next(err)
+        }
     }
 
 }

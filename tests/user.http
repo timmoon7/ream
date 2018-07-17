@@ -1,0 +1,24 @@
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "john@coderacademy.com",
+    "password": "1234"
+}
+###
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email": "john@coderacademy.com",
+    "password": "1234",
+    "campus": "melbourne",
+    "first_name": "John",
+    "last_name": "Smith",
+    "role": "Admin"
+}
+
+
+###
+GET http://localhost:3000/user/

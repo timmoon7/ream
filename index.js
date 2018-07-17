@@ -5,6 +5,7 @@ const cors = require('cors')
 const app = express()
 
 const authRouter = require('./routes/authRouter')
+const userRouter = require('./routes/userRouter')
 const questionRouter = require('./routes/questionRouter')
 const interviewRouter = require('./routes/interviewRouter')
 
@@ -18,6 +19,7 @@ app.use(cors({
 }))
 app.use(cookieParser())
 app.use('/auth', authRouter)
+app.use('/user', userRouter)
 app.use('/questions', questionRouter)
 app.use('/interviews', interviewRouter)
 

@@ -21,14 +21,14 @@ module.exports = {
     replaceUser: async (req, res, next) => {
         const { userId } = req.params
         const newUser = req.body
-        const result =  await User.findByIdAndUpdate(userId, newUser)
+        const result =  await User.findByIdAndUpdate(userId, newUser, {new: true})
         res.status(200).json(result)
     },
 
     updateUser: async (req, res, next) => {
         const { userId } = req.params
         const newUser = req.body
-        const result =  await User.findByIdAndUpdate(userId, newUser)
+        const result =  await User.findByIdAndUpdate(userId, newUser, {new: true})
         res.status(200).json(result)
     },
 

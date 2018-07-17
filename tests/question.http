@@ -4,7 +4,7 @@ POST http://localhost:3000/questions
 Content-Type: application/json
 
 {
-    "category": "Technical Skills",
+    "category": "Technical Skills 2",
     "title": "Previous Work Experience 2",
     "description": "What job are you doing at the moment?",
     "criteria": [
@@ -23,15 +23,15 @@ Content-Type: application/json
 GET http://localhost:3000/questions/
 
 ###
-GET http://localhost:3000/questions/5b4b245a8a353825721d6e2a
+GET http://localhost:3000/questions/5b4d54631fcb6506a9a18f2a
 
 ###
-PUT http://localhost:3000/questions/5b4b245a8a353825721d6e2a
+PUT http://localhost:3000/questions/5b4d54631fcb6506a9a18f2a
 Content-Type: application/json
 
 {
-    "category": "Technical Skills1",
-    "title": "Previous Work Experience1",
+    "category": "Technical Skills3",
+    "title": "Previous Work Experience3",
     "description": "What job are you doing at the moment?",
     "criteria": [
         {"item": "No work experience at all", "value": 1},
@@ -46,18 +46,18 @@ Content-Type: application/json
 
 
 ###
-PATCH http://localhost:3000/questions/5b4b245a8a353825721d6e2a
+PATCH http://localhost:3000/questions/5b4d54631fcb6506a9a18f2a
 Content-Type: application/json
 
 {
-    "category": "Technical Skills1",
-    "title": "Previous Work Experience1",
+    "category": "Technical Skills4",
+    "title": "Previous Work Experience5",
     "description": "1What job are you doing at the moment?"
 }
 
 
 ###
-DELETE http://localhost:3000/questions/5b4b245a8a353825721d6e2a
+DELETE http://localhost:3000/questions/5b4d54631fcb6506a9a18f2a
 
 
 

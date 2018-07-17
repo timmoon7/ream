@@ -16,18 +16,6 @@ const questionSchema = new Schema({
     comment: String
 })
 
-questionSchema.statics.createQuestion = async function(question) {
-    
-    try {
-        const newQuestion = await this.create(question)
-        return newQuestion
-    } catch(err) {
-        return new Error('Failed to insert an question')
-    }
-}
-
-
-
 const Question = mongoose.model('Question', questionSchema)
 
 module.exports = Question

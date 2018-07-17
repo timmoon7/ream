@@ -49,20 +49,20 @@ Content-Type: application/json
     "intake": 1,
     "campus": "Melbourne",
     "interviewer": "5b44483f4330e5ca9f6ec619",
-    "date_time": "2018/07/13 15:00:00",
+    "date_time": "2018/07/19 15:00:00",
     "interviewee": {
-        "email": "sally@test.com", 
+        "email": "nick@test.com", 
         "phone": "0412345678",
-        "first_name": "Sally",
+        "first_name": "Nick",
         "last_name": "Smith"
     }
 }
 
 ###
-GET http://localhost:3000/interviews/5b4c1438d684c9352d5bd39b
+GET http://localhost:3000/interviews/5b4d572b9114bd07261f65d0
 
 ###
-PUT http://localhost:3000/interviews/5b4c1438d684c9352d5bd39b
+PUT http://localhost:3000/interviews/5b4d572b9114bd07261f65d0
 Content-Type: application/json
 
 
@@ -101,7 +101,7 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:3000/interviews/5b4c1438d684c9352d5bd39b
+PATCH http://localhost:3000/interviews/5b4d572b9114bd07261f65d0
 Content-Type: application/json
 
 {
@@ -118,7 +118,7 @@ Content-Type: application/json
         {"question": "Purpose & Drivenness", "score": 5}
     ],
     "test_score": 10,
-    "outcome": "Accepted",
+    "outcome": "Rejected",
     "outcome_comment": "Wating for something",
     "student_id": "CAM1000002",
     "jr_updated": true,
@@ -129,5 +129,5 @@ Content-Type: application/json
 
 
 ###
-DELETE http://localhost:3000/interviews/5b4c1438d684c9352d5bd39b
+DELETE http://localhost:3000/interviews/5b4d572b9114bd07261f65d0
 

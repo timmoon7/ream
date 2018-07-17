@@ -28,17 +28,6 @@ const interviewSchema = new Schema({
 
 })
 
-
-interviewSchema.statics.createInterview = async function(interview) {
-    
-    try {
-        const newInterview = await this.create(interview)
-        return newInterview
-    } catch(err) {
-        return new Error('Failed to insert an interview')
-    }
-}
-
 const Interview = mongoose.model('Interview', interviewSchema)
 
 module.exports = Interview

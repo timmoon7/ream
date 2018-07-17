@@ -1,15 +1,13 @@
 const Interview = require('../models/Interview')
 
 module.exports = {
-    index: (req, res, next) => {
-        Interview.find()
-        .then(interviews => {
+    index: async (req, res, next) => {
+        try {
+            const interviews = await Interview.find()
             res.status(200).json(interviews)
-        })
-        .catch(err => {
-            next(err)
-            // throw new Error(err.message)
-        })
+            } catch(err) {
+                next(err)
+            }
     },
 
     newInterview: async (req, res, next) => {
@@ -23,30 +21,46 @@ module.exports = {
     },
 
     getInterview: async (req, res, next) => {
-        const { interviewId } = req.params
-        const interview =  await Interview.findById(interviewId)
-        res.status(200).json(interview)
+        try {
+            const { interviewId } = req.params
+            const interview =  await Interview.findById(interviewId)
+            res.status(200).json(interview)
+        } catch (err) {
+            next(err)
+        }
     },
 
     replaceInterview: async (req, res, next) => {
-        const { interviewId } = req.params
-        const newInterview = req.body
-        const result =  await Interview.findByIdAndUpdate(interviewId, newInterview)
-        res.status(200).json(result)
+        try {
+            const { interviewId } = req.params
+            const newInterview = req.body
+            const result =  await Interview.findByIdAndUpdate(interviewId, newInterview, {new: true})
+            res.status(200).json(result)
+    } catch (err) {
+        next(err)
+    }
     },
 
     updateInterview: async (req, res, next) => {
-        const { interviewId } = req.params
-        const newInterview = req.body
-        const result =  await Interview.findByIdAndUpdate(interviewId, newInterview)
-        res.status(200).json(result)
+        try {
+            const { interviewId } = req.params
+            const newInterview = req.body
+            const result =  await Interview.findByIdAndUpdate(interviewId, newInterview, {new: true})
+            res.status(200).json(result)
+        } catch (err) {
+            next(err)
+        }
     },
 
     deleteInterview: async (req, res, next) => {
-        const { interviewId } = req.params
-        const interview = await Interview.findById(interviewId)
-        const result =  await interview.remove()
-        res.status(200).json(result)
+        try {
+            const { interviewId } = req.params
+            const interview = await Interview.findById(interviewId)
+            const result =  await interview.remove()
+            res.status(200).json(result)
+        } catch (err) {
+            next(err)
+        }
     }
 
 }
