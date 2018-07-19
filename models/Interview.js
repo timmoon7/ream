@@ -1,7 +1,8 @@
 const mongoose = require('../controllers/connectdb')
+
 // const bcrypt = require('bcrypt')
 const {Schema} = mongoose
-
+const timeZone = require('mongoose-timezone');
 
 const interviewSchema = new Schema({
     year: Number,
@@ -27,6 +28,8 @@ const interviewSchema = new Schema({
     comment: String
 
 })
+
+interviewSchema.plugin(timeZone, { paths: 'date_time' });
 
 const Interview = mongoose.model('Interview', interviewSchema)
 
