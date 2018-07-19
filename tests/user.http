@@ -7,18 +7,43 @@ Content-Type: application/json
 }
 ###
 
-POST http://localhost:3000/auth/register
+POST http://localhost:3000/users/
 Content-Type: application/json
 
 {
-    "email": "john@coderacademy.com",
+    "email": "calista@coderacademy.com",
     "password": "1234",
     "campus": "melbourne",
-    "first_name": "John",
-    "last_name": "Smith",
+    "first_name": "Calista",
+    "last_name": "Test",
     "role": "Admin"
 }
 
 
 ###
-GET http://localhost:3000/user/
+GET http://localhost:3000/users/
+
+
+###
+GET http://localhost:3000/users/5b4c12114bdffeefe216019f
+
+###
+PUT http://localhost:3000/users/5b4c12114bdffeefe216019f
+Content-Type: application/json
+
+{
+
+}
+
+
+###
+PATCH http://localhost:3000/users/5b4c12114bdffeefe216019f/
+Content-Type: application/json
+
+{
+
+}
+
+
+###
+DELETE http://localhost:3000/users/5b4c12114bdffeefe216019f
