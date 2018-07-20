@@ -22,9 +22,18 @@ const interviewSchema = new Schema({
     outcome: String,
     outcome_comment: String,
     student_id: String,
-    jr_updated: Boolean,
-    hubspot_updated: Boolean,
-    enrolment_confirmed: Boolean,
+    jr_updated: {
+        type: Boolean,
+        default: false
+    },
+    hubspot_updated: {
+        type: Boolean,
+        default: false
+    },
+    enrolment_confirmed: {
+        type: Boolean,
+        default: false
+    },
     comment: String
 
 })
