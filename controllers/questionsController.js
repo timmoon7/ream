@@ -3,7 +3,7 @@ const Question = require('../models/Question')
 module.exports = {
     index: async (req, res, next) => {
         try {
-            const questions = await Question.find()
+            const questions = await Question.find().sort({priority: 1})
             res.status(200).json(questions)
             } catch(err) {
                 next(err)
