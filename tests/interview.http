@@ -10,7 +10,7 @@ Content-Type: application/json
     "year": 2018,
     "intake": 1,
     "campus": "Melbourne",
-    "interviewer": "5b44483f4330e5ca9f6ec619",
+    "interviewer": "John Smith",
     "date_time": "2018/07/20",
     "duration": 30,
     "interviewee": {

@@ -1,6 +1,4 @@
 const mongoose = require('../controllers/connectdb')
-
-// const bcrypt = require('bcrypt')
 const {Schema} = mongoose
 const timeZone = require('mongoose-timezone');
 
@@ -8,7 +6,7 @@ const interviewSchema = new Schema({
     year: Number,
     intake: Number,
     campus: String,
-    interviewer: { type: Schema.Types.ObjectId, ref: 'User' },
+    interviewer: String,
     date_time: Date,
     duration: Number,
     interviewee: {

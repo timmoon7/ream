@@ -1,4 +1,5 @@
 const User = require('../models/User')
+const bcrypt = require('bcrypt')
 
 module.exports = {
     index: async (req, res, next) => {
@@ -45,8 +46,16 @@ module.exports = {
         try {
         const { userId } = req.params
         const newUser = req.body
-        const result =  await User.findByIdAndUpdate(userId, newUser, {new: true})
-        res.status(200).json(result)
+
+        const salt = await bcrypt.genSalt()
+        const hash = await bcrypt.hash(newUser.password, salt)
+        newUser.password = hash
+
+        const user =  await User.findByIdAndUpdate(userId, newUser, {new: true})
+
+        const userObj = user.toObject()
+        delete userObj.password
+        res.status(200).json(userObj)
         } catch(err) {
             next(err)
         }

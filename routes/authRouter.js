@@ -11,17 +11,12 @@ router.post('/login', (req, res) => {
 
     User.isAuthenticUser(email, password)
     .then(auth => {
-    
         if(auth) {
-            const [,,,ip_address] = req.ip.split(":")
-
             const payload = {
-                email,
-                ip_address
+                email
             }
         
             const JWT_SECRET = process.env.JWT_SECRET
-            
             const token = JWT.sign(payload, JWT_SECRET)
 
             res.cookie('access_token', token, {
@@ -33,7 +28,6 @@ router.post('/login', (req, res) => {
             res.status(200).json({
                 message: 'you logged in',
             }) 
-
         } else {
             res.status(500)
             throw new Error(`Authentication failed`)    
@@ -41,8 +35,8 @@ router.post('/login', (req, res) => {
         
     })
     .catch(err => {
+        console.log('Authenticaion failed')
         res.status(500)
-        throw new Error(err.message)
     })
 
 })
