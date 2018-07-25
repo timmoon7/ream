@@ -35,7 +35,7 @@ router.post('/login', (req, res) => {
         
     })
     .catch(err => {
-        console.log('Authenticaion failed')
+        console.info('Authenticaion failed')
         res.status(500)
     })
 
