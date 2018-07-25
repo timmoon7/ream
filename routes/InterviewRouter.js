@@ -6,7 +6,6 @@ router.route('/')
     .get(InterviewsController.index)
     .post(InterviewsController.newInterview);
 
-   
 router.route('/:interviewId')
     .get(InterviewsController.getInterview)
     .put(InterviewsController.replaceInterview)

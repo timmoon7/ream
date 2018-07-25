@@ -1,5 +1,4 @@
 const express = require('express')
-// const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
 const app = express()
@@ -10,9 +9,7 @@ const questionRouter = require('./routes/questionRouter')
 const interviewRouter = require('./routes/interviewRouter')
 
 const PORT = 3000
-// app.use(bodyParser.json())
 app.use(express.json())
-// app.use(cors())
 app.use(cors({
    origin: '*',
    credentials: true 
