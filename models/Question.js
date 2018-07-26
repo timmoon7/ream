@@ -1,7 +1,6 @@
 const mongoose = require('../controllers/connectdb')
 const {Schema} = mongoose
 
-
 const questionSchema = new Schema({
     category: String,
     title: String,

@@ -5,7 +5,7 @@ const QuestionsController = require('../controllers/questionsController')
 router.route('/')
     .get(QuestionsController.index)
     .post(QuestionsController.newQuestion);
-  
+   
 router.route('/:questionId')
     .get(QuestionsController.getQuestion)
     .put(QuestionsController.replaceQuestion)

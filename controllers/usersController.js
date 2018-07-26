@@ -44,18 +44,23 @@ module.exports = {
 
     updateUser: async (req, res, next) => {
         try {
-        const { userId } = req.params
-        const newUser = req.body
+            const { userId } = req.params
+            const newUser = req.body
 
-        const salt = await bcrypt.genSalt()
-        const hash = await bcrypt.hash(newUser.password, salt)
-        newUser.password = hash
+            if (newUser.password.length > 1) {
+                const salt = await bcrypt.genSalt()
+                const hash = await bcrypt.hash(newUser.password, salt)
+                newUser.password = hash
+            } else {
+                delete newUser.password
+                const user =  await User.findByIdAndUpdate(userId, newUser, {new: true})
+            }
 
-        const user =  await User.findByIdAndUpdate(userId, newUser, {new: true})
-
-        const userObj = user.toObject()
-        delete userObj.password
-        res.status(200).json(userObj)
+            const user =  await User.findByIdAndUpdate(userId, newUser, {new: true})
+            const userObj = user.toObject()
+            delete userObj.password
+            res.status(200).json(userObj)
+            
         } catch(err) {
             next(err)
         }
