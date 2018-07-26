@@ -1,5 +1,5 @@
 const mongoose = require('../controllers/connectdb')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const {Schema} = mongoose
 
 
