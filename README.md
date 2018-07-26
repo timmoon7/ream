@@ -1,4 +1,17 @@
-# Part A
+# Front-end 
+https://ream.now.sh/ <br>
+https://github.com/timmoon7/ream-front
+# Back-end 
+https://github.com/timmoon7/ream <br>
+http://ream-api.now.sh/users <br>
+http://ream-api.now.sh/questions <br>
+http://ream-api.now.sh/interviews
+# Term 3 Project - REAM
+- [Part A](#a)
+- [Part B](#b)
+- [Part C](#c)
+
+# <a id="a"></a> Part A
 
 ## Table of Contents:
 - [Q1 Who is your client?](#1)
@@ -92,10 +105,10 @@ The database to be used is MongoDB. The reason for our choice is it’s data rep
 We have 3 basic collections: Users, Questions and Interviews. Users and questions will be embedded in the interviews collection. 
 
 #### 13. <a id="13"></a> Provide your database schema design.
-![schema](./assets/schema)
-![user](./assets/user.png)
-![question](./assets/question.png)
-![interview](./assets/interview.png)
+![schema](./images/schema)
+![user](./images/user.png)
+![question](./images/question.png)
+![interview](./images/interview.png)
 
 #### 14. <a id="14"></a> Provide User stories for your App.
 - As an interviewer I want to be able to record answers in real time so that I can record accurate information.
@@ -116,7 +129,7 @@ We have 3 basic collections: Users, Questions and Interviews. Users and question
 
 #### 15. <a id="15"></a> Provide Wireframes for your App. <br>
 https://www.figma.com/file/Mk5ccSdSuA67OOHbsYK9XoyJ/Project-3
-![figma](./assets/figma2.png)
+![figma](./images/figma2.png)
 
 #### 16. <a id="16"></a> Describe the way Tasks are being allocated and tracked in your project. <br>
 Tasks are being allocated and tracked via Trello. Tasks are made small and achievable, and are colour coded based on progress. There is a further layer of task separation with colour coding based on what is part A, B and C. 
@@ -172,7 +185,7 @@ The compliance officer at RedHill Education provided us with the following infor
 - The RedHill site has a separate privacy Policy that relates to its obligations which are different to the legal obligations of the various education providers owned by RedHill.
 
 
-# Part B
+# <a id="b"></a> Part B
 ## Table of Contents:
 - [Problem](#23)
 - [Solution](#24)
@@ -182,6 +195,9 @@ The compliance officer at RedHill Education provided us with the following infor
 - [Workflow Diagram](#28)
 - [Database Design](#29)
 - [Project Plan & Estimation](#30)
+- [Meeting Minutes](#31)
+- [Client Questionnaire](#32)
+
 
 ### <a id="23"></a> Problem
 Our client is Coder Academy’s Operations and Client Services Team. When a prospective candidate applies for a course there is an admissions interview where they are scored based on an admissions matrix. The clients challenge is that their current admissions matrix utilises an across campus google sheet to analyse student responses in their admissions interview. This static sheet is while useful, not sufficient in it’s usability. Some of the sore spots for Coder Academy’s current admissions system are the following. 
@@ -196,16 +212,21 @@ We will be creating an app where Coder Academy interviewers can in real time log
 ### <a id="25"></a> Summary 
 The app will be used during the admissions interview on an iPad. The interviewer will log in, and be able to enter new candidate details prior to the start of the interview. When the interview commences, the interviewer will be able to, in real time log responses from the candidate. At the end of the interview, the responses are submitted and an interview summary is displayed.  The answers are scored, and a total is provided to determine whether or not the candidate meets the admissions criteria. The interview data is saved, so the interviewer is able to access the information at a later time. By viewing all, the interviewer can not only view the most recent candidate’s scores, but all other candidates previously interviewed across campuses so the data can be analysed.  
 ### <a id="26"></a> Initial Design
+![sketch1](./images/sketch1.jpg)
+![sketch2](./images/sketch2.png)
+![sketch3](./images/sketch3.png)
+![sketch4](./images/sketch4.png)
+![sketch5](./images/sketch5.png)
 
 ### Wireframes 
 https://www.figma.com/file/Mk5ccSdSuA67OOHbsYK9XoyJ/Project-3
 ### Wireframes (Before)
 Our wireframes before receiving client feedback. 
-![beforewireframe](./assets/figma.png)
+![beforewireframe](./images/figma1.png)
 
 ### Wireframes (After)
 Our wireframes after receiving client feedback. We had an interview with Samara where we showed her the wireframes and discussed how it could be adjusted to better suit her needs. 
-![beforewireframe](./assets/figma2.png)
+![beforewireframe](./images/figma2.png)
 
 ### <a id="27"></a> User Stories
 - As an interviewer I want to be able to record answers in real time so that I can record accurate information.
@@ -225,20 +246,30 @@ Our wireframes after receiving client feedback. We had an interview with Samara 
 - As Coder Academy we want our staff members conducting interviews to be able to do so as quickly and easily and possible so that our staff can be as efficient in roles as possible.
 
 ### <a id="28"></a> Workflow Diagram
-![schema](./assets/workflow.jpg)
+![schema](./images/workflow.jpg)
 
 ### <a id="29"></a> Database Design
-![schema](./assets/schema)
-![user](./assets/user.png)
-![question](./assets/question.png)
-![interview](./assets/interview.png)
+![schema](./images/schema)
+![user](./images/user.png)
+![question](./images/question.png)
+![interview](./images/interview.png)
 ### <a id="30"></a> Project Plan & Estimation
 
 Agile development in our app at it’s core came from our team Trello board. Incremental work was allocated to all team members instead of all at once. We planned to continously reassess tasks and how they are allocated and then alter things as required.
 
-![user](./assets/estimation.png)
+![user](./images/estimation.png)
 https://trello.com/b/hJPywhKY/ca-term-3-project
-![user](./assets/trello.png)
+![user](./images/trello.png)
 
-# Part C
-The presentation slides have been included in the submitted documents. 
+### <a id="31"></a> Meeting Minutes
+![sketch1](./images/meeting1.jpg)
+![sketch2](./images/meeting2.jpg)
+
+### <a id="32"></a>  Client Questionnaire
+
+![questionnaire](./images/questionnaire.jpg)
+
+Please note the client questionnaire was filled out prior to submission date due to our client going on annual leave.
+
+# <a id="c"></a> Part C
+The presentation slides have been included in the submitted documents.
