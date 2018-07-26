@@ -1,4 +1,18 @@
-# Part A
+# Front-end 
+https://ream.now.sh/
+https://github.com/timmoon7/ream-front
+# Back-end 
+https://github.com/timmoon7/ream
+http://ream-api.now.sh/users
+http://ream-api.now.sh/questions
+http://ream-api.now.sh/interviews
+
+# Term 3 Project - REAM
+- [Part A](#a)
+- [Part B](#b)
+- [Part C](#c)
+
+# <a id="a"></a> Part A
 
 ## Table of Contents:
 - [Q1 Who is your client?](#1)
@@ -172,7 +186,7 @@ The compliance officer at RedHill Education provided us with the following infor
 - The RedHill site has a separate privacy Policy that relates to its obligations which are different to the legal obligations of the various education providers owned by RedHill.
 
 
-# Part B
+# <a id="b"></a> Part B
 ## Table of Contents:
 - [Problem](#23)
 - [Solution](#24)
@@ -196,6 +210,12 @@ We will be creating an app where Coder Academy interviewers can in real time log
 ### <a id="25"></a> Summary 
 The app will be used during the admissions interview on an iPad. The interviewer will log in, and be able to enter new candidate details prior to the start of the interview. When the interview commences, the interviewer will be able to, in real time log responses from the candidate. At the end of the interview, the responses are submitted and an interview summary is displayed.  The answers are scored, and a total is provided to determine whether or not the candidate meets the admissions criteria. The interview data is saved, so the interviewer is able to access the information at a later time. By viewing all, the interviewer can not only view the most recent candidate’s scores, but all other candidates previously interviewed across campuses so the data can be analysed.  
 ### <a id="26"></a> Initial Design
+
+![sketch1](./assets/sketch1.jpg)
+![sketch2](./assets/sketch2.png)
+![sketch3](./assets/sketch3.png)
+![sketch4](./assets/sketch4.png)
+![sketch5](./assets/sketch5.png)
 
 ### Wireframes 
 https://www.figma.com/file/Mk5ccSdSuA67OOHbsYK9XoyJ/Project-3
@@ -240,5 +260,15 @@ Agile development in our app at it’s core came from our team Trello board. Inc
 https://trello.com/b/hJPywhKY/ca-term-3-project
 ![user](./assets/trello.png)
 
-# Part C
+### <a id="31"></a> Meeting Minutes
+![sketch1](./assets/meeting1.jpg)
+![sketch2](./assets/meeting2.jpg)
+
+### <a id="32"></a>  Client Questionnaire
+
+![questionnaire](./assets/questionnaire.jpg)
+
+Please note the client questionnaire was filled out prior to submission date due to our client going on annual leave.
+
+# <a id="c"></a> Part C
 The presentation slides have been included in the submitted documents. 
