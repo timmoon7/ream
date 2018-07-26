@@ -11,7 +11,7 @@ const interviewRouter = require('./routes/interviewRouter')
 const PORT = 3000
 app.use(express.json())
 app.use(cors({
-   origin: '*',
+   origin: 'http://localhost:3001',
    credentials: true 
 }))
 app.use(cookieParser())

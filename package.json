@@ -7,7 +7,6 @@
     "now start": "node index.js",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "seed": "node ./controllers/questionsSeed.js",
     "test": "jset"
   },
   "author": "",
@@ -16,7 +15,7 @@
     "nodemon": "^1.18.2"
   },
   "dependencies": {
-    "bcrypt": "^2.0.1",
+    "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.3",
     "cookies": "^0.7.1",
     "cors": "^2.8.4",
